@@ -1,0 +1,23 @@
+Creating React App Using vite
+1. Install Node.js
+2. Create a New Vite Project
+npm create vite@latest my-react-app
+3. Select React Template
+JavaScript: Basic React setup.
+4. Navigate to Your Project Directory
+cd my-react-app
+5. Install Dependencies
+npm install
+6. Start the Development Server
+npm run dev
+
+
+For Fast Installation we use
+bun Package Manager
+npm i -g bun 
+
+Components:
+Are JavaScript Function that return JSX
+JSX is syntax that allow you to write htlm_like code in JavaScript
+
+

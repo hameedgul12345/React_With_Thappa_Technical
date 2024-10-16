@@ -1,0 +1,52 @@
+ [
+    {
+     "name": "Toyota Corolla",
+      "model": 2023,
+      "picture": "https://example.com/toyota-corolla.jpg",
+    },
+    {
+     "name": "Honda Civic",
+      "model": 2022,
+      "picture": "https://example.com/honda-civic.jpg",
+    },
+    {
+     "name": "Ford Mustang",
+      "model": 2021,
+      "picture": "https://example.com/ford-mustang.jpg",
+    },
+    {
+     "name": "Tesla Model 3",
+      "model": 2023,
+      "picture": "https://example.com/tesla-"",
+    },
+    {
+     "name": "Chevrolet Camaro",
+      "model": 2022,
+      "picture": ""
+    },
+    {
+     "name": "BMW 3 Series",
+      "model": 2021,
+      "picture": ""
+    },
+    {
+     "name": "Audi A4",
+      "model": 2023,
+      "picture": ""
+    },
+    {
+     "name": "Mercedes-Benz C-Class",
+      "model": 2022,
+      "picture": ""
+    },
+    {
+     "name": "Hyundai Elantra",
+      "model": 2021,
+      "picture": ""
+    },
+    {
+     "name": "Kia Optima",
+      "model": 2023,
+      "picture": ""
+    }
+  ]

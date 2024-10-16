@@ -1,0 +1,48 @@
+Event handling diffferennnce in  react and javaScript
+In React, when you pass `handleClick` without parentheses in the `onClick` attribute, like this:
+
+```jsx
+<button onClick={handleClick}>Click me</button>;
+```
+
+you are passing the function reference itself to the event handler, rather than calling it immediately. Here's a detailed explanation:
+
+### **Why We Don't Use `()` with `handleClick`:**
+
+1. **Function Reference vs. Function Call:**
+   - **Without `()` (Function Reference):** When you write `onClick={handleClick}`, you are passing the reference to the function. This means React will call `handleClick` when the button is clicked. The function is not executed immediately; it's just provided to be called later.
+   
+     ```jsx
+     const handleClick = () => {
+       console.log("Button clicked!");
+     };
+
+     // Passing the reference of handleClick
+     <button onClick={handleClick}>Click me</button>;
+     ```
+
+2. **With `()` (Function Call):**
+   - If you add `()` to `handleClick` like `onClick={handleClick()}`, the function is called immediately when the component renders, not when the button is clicked. This is because the parentheses `()` execute the function right away, and the result of that execution (which is usually `undefined` for functions that don't return anything) is passed to `onClick`.
+   
+     ```jsx
+     // This will call the function immediately, not on click
+     <button onClick={handleClick()}>Click me</button>; // Incorrect usage
+     ```
+
+3. **Correct Usage:**
+   - To ensure that the function only runs when the event occurs (in this case, when the button is clicked), you should pass the function reference without parentheses.
+
+4. **Handling Arguments with Arrow Functions:**
+   - If you need to pass arguments to the function, you can use an arrow function within the event handler:
+   
+     ```jsx
+     <button onClick={() => handleClick(arg)}>Click me</button>;
+     ```
+
+   - Here, the arrow function creates a new function that will call `handleClick` with `arg` when the button is clicked, ensuring the function isn’t called immediately during rendering.
+
+### **Summary:**
+- **Without `()`**: Passes the function reference to be called on the event.
+- **With `()`**: Calls the function immediately during render, which is usually unintended.
+
+Using the function reference without `()` ensures the function only runs when the user interacts with the element, providing the expected behavior.
